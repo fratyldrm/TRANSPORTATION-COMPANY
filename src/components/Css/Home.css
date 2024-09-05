@@ -1,0 +1,67 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* Header'ın üstte kalmasını sağla */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.logo {
+    width: 25px;
+
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+
+    &:hover {
+        color: #ffc107;
+    }
+
+    @media (max-width: 768px) {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+}
+
+.contact-button {
+    background-color: #ffc107;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}

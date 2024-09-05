@@ -1,0 +1,89 @@
+/* Header CSS */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px;
+    margin-right: 12;
+    background-color: rgba(0, 0, 0, 0.0);
+    /* Transparan arka plan */
+    backdrop-filter: blur(1px);
+    /* Blur efekti */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge */
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure all menu items are white */
+.menu-item {
+    color: white !important;
+    /* Set link color to white */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 19px;
+    position: relative;
+}
+
+/* Ensure dropdown menu items are white */
+.nav-dropdown .dropdown-menu {
+    background-color: #042453;
+    /* Match header background color */
+}
+
+.nav-dropdown .dropdown-item {
+    color: white;
+    /* Set dropdown item color to white */
+}
+
+.nav-dropdown .dropdown-item:hover {
+    background-color: #003366;
+    /* Highlight color on hover */
+    color: white;
+    /* Ensure text remains white on hover */
+}
+
+/* Ensure dropdown title is white */
+.nav-dropdown .dropdown-toggle {
+    color: white !important;
+    /* Set dropdown title color to white */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .menu-item {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .contact-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        margin-right: 0;
+        /* Mobilde margin'i sıfırla */
+    }
+}

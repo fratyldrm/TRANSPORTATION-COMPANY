@@ -1,0 +1,90 @@
+/* Ana container düzeni */
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sayfanın üst kısmı */
+.header {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(to right, #042453, #FFFFFF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header h1 {
+    margin-top: 0;
+    color: white;
+    padding: 22px;
+}
+
+.header p {
+    color: #ffc107;
+    padding-left: 22px;
+}
+
+/* İçerik bölümü */
+.content {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 300px);
+}
+
+/* Sol kısım (butonlar) */
+.sidebar {
+    width: 25%;
+    padding: 30px;
+    background-color: #f7f7f7;
+}
+
+/* Sol kısım buton stili */
+.sidebar-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Sağ kısım (resim ve başlık) */
+.main-content {
+    width: 75%;
+    padding: 20px;
+}
+
+.main-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Mobil ekranlar için düzenleme (800px ve altı genişlikler) */
+@media (max-width: 800px) {
+    .content {
+        flex-direction: column;
+        /* İçerikleri alt alta diz */
+    }
+
+    .sidebar {
+        width: 100%;
+        /* Sol kısım tam genişlik */
+        padding: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+        /* Sağ kısım tam genişlik */
+        padding: 20px;
+    }
+
+    .main-content img {
+        width: 100%;
+        /* Resim tam genişlik */
+    }
+}
